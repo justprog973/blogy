@@ -1,0 +1,22 @@
+{
+    "name": "justprog/blogy",
+    "authors": [
+        {
+            "name": "justprog973",
+            "email": "edge973@hotmail.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/Framework"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "require": {
+        "guzzlehttp/psr7": "^2.2",
+        "http-interop/response-sender": "^1.0"
+    }
+}
