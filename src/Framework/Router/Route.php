@@ -11,17 +11,8 @@ use Psr\Http\Server\MiddlewareInterface;
 class Route
 {
 
-    private string $name;
-
-    private $callback;
-
-    private array $parameters;
-
-    public function __construct(string $name, callable $callback, array $parameters)
+    public function __construct(private string $name, private \callable $callback, private array $parameters)
     {
-        $this->name = $name;
-        $this->callback = $callback;
-        $this->parameters = $parameters;
     }
 
     /**
