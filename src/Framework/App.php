@@ -10,15 +10,11 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class App
 {
-
-    private array $modules = [];
-    private Router $router;
-
     /**
      *
      * @param string[] $modules #List of modules to loading
      */
-    public function __construct(array $modules = [], array $dependencies = [])
+    public function __construct(private array $modules = [], private array $dependencies = [])
     {
         $this->router = new Router();
         if (array_key_exists("renderer", $dependencies)) {
