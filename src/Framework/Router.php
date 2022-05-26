@@ -2,6 +2,7 @@
 
 namespace Framework;
 
+use Framework\Middleware\CallableMiddleware;
 use Framework\Router\Route;
 use Mezzio\Router\FastRouteRouter;
 use Mezzio\Router\Route as MezzioRoute;

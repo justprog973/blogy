@@ -4,13 +4,10 @@ namespace Framework\Renderer;
 
 class TwigRenderer implements RendererInterface
 {
-    private \Twig\Environment $twig;
-    private \Twig\Loader\FilesystemLoader $loader;
-
-    public function __construct(private string $path)
-    {
-        $this->loader = new \Twig\Loader\FilesystemLoader($path);
-        $this->twig = new \Twig\Environment($this->loader, []);
+    public function __construct(
+        private \Twig\Loader\FilesystemLoader $loader,
+        private \Twig\Environment $twig
+    ) {
     }
 
     public function addPath(string $namespace, ?string $path = null): void

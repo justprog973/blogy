@@ -21,6 +21,7 @@
         "guzzlehttp/psr7": "^2.2",
         "http-interop/response-sender": "^1.0",
         "mezzio/mezzio-fastroute": "^3.5",
-        "twig/twig": "^3.4"
+        "twig/twig": "^3.4",
+        "php-di/php-di": "^6.4"
     }
 }

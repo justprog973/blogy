@@ -10,14 +10,14 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class CallableMiddleware implements MiddlewareInterface
 {
-    private $callable;
+    private \callable|string $callable;
 
-    public function __construct(callable $callable)
+    public function __construct(callable|string $callable)
     {
         $this->callable = $callable;
     }
 
-    public function getCallable()
+    public function getCallable(): callable|string
     {
         return $this->callable;
     }
