@@ -3,16 +3,14 @@
 namespace App\Blog;
 
 use Framework\Middleware\CallableMiddleware;
-use Framework\Renderer;
+use Framework\Renderer\RendererInterface;
 use Framework\Router;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 class BlogModule
 {
-    private Renderer $renderer;
-
-    public function __construct(Router $router, Renderer $renderer)
+    public function __construct(Router $router, private RendererInterface $renderer)
     {
         // Added path view
         $this->renderer = $renderer;

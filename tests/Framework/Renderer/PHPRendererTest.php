@@ -1,17 +1,17 @@
 <?php
 
-namespace Tests\Framework;
+namespace Tests\Framework\Renderer;
 
-use Framework\Renderer;
+use Framework\Renderer\PHPRenderer;
 use PHPUnit\Framework\TestCase;
 
-class RendererTest extends TestCase
+class PHPRendererTest extends TestCase
 {
-    private Renderer $renderer;
+    private PHPRenderer $renderer;
 
     public function setUp(): void
     {
-        $this->renderer = new Renderer();
+        $this->renderer = new PHPRenderer();
         $this->renderer->addPath(__DIR__ . "/views");
     }
 
