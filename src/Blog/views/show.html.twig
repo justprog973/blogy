@@ -1,11 +1,11 @@
 {% extends "layout.html.twig" %}
 
-{% block title slug %}
+{% block title post.name %}
 
 {% block body %}
 
-    <h1>Bienvenue sur l'article {{ slug }}</h1>
+<h1>Bienvenue sur l'article {{ post.name }}</h1>
 
-    <a href="{{ path('blog.index')}}">Retour</a>
-
-{% endblock %} 
+<p>{{ post.content | nl2br }}</p>
+<a href="{{ path('blog.index')}}">Retour</a>
+{% endblock %}

@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr_FR">
+<html lang="fr">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{% block title "Blogy - Blog" %}</title>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title "Blogy - Blog" %}</title>
+</head>
 
-	<body>
-		<div class="container"> 
-            {% block body %}{% endblock %}
-		</div>
-	</body>
+<body>
+	<nav class="navbar">
+		<div class="navbar__brand">Blogy</div>
+		<ul class="navbar__nav">
+			<li class="navbar__nav__item"><a href="{{ path('blog.index') }}">Blog</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		{% block body %}{% endblock %}
+	</div>
+</body>
+
 </html>

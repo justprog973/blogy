@@ -27,6 +27,8 @@ return
             'default_database' => 'development',
             'development' => [
                 'adapter' => 'mysql',
+                'charset' => 'utf8',
+                'collation' => 'utf8_general_ci',
                 'host' => $app->getContainer()->get("database.host"),
                 'name' => $app->getContainer()->get("database.name"),
                 'user' => $app->getContainer()->get("database.username"),

@@ -23,6 +23,6 @@ class BlogModule extends Module
 
         //Initalized Route
         $router->get($prefix, new CallableMiddleware(BlogAction::class), "blog.index");
-        $router->get("$prefix/{slug:[a-z\-0-9]+}", new CallableMiddleware(BlogAction::class), "blog.show");
+        $router->get("$prefix/{slug:[a-z\-0-9]+}-{id:[0-9]+}", new CallableMiddleware(BlogAction::class), "blog.show");
     }
 }

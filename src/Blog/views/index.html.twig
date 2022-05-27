@@ -4,12 +4,16 @@
 
 {% block body %}
 
-    <h1>Bienvenue sur le blog</h1>
+<h1>Bienvenue sur le blog</h1>
 
-    <ul>
-        <li>
-            <a href="{{ path('blog.show', {slug: 'app-1'})}}">App 1</a>
-        </li>
-    </ul>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="{{ path('blog.show', {slug: post.slug, id: post.id}) }}">
+            {{ post.name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
 
-{% endblock %} 
+{% endblock %}
