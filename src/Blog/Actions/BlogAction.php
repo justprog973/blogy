@@ -31,7 +31,7 @@ class BlogAction
 
     public function index(): string|ResponseInterface
     {
-        $posts = $this->postTable->findPaginated();
+        $posts = $this->postTable->findPaginated(12);
         return $this->renderer->render("@blog/index", compact("posts"));
     }
 
